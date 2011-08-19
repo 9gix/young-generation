@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for entry in entries %}
+<article>
+<header>
+<h1>{{ entry.title }}</h1>
+</header>
+<div id="{{ entry.title }}"></div>
+<p>{{ entry.body }}</p>
+</article>
+{% endfor %}
+{% endblock %}
