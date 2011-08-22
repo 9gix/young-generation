@@ -1,54 +1,90 @@
-<!DOCTYPE html 
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-    dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}"
-    xml:lang="{% firstof LANGUAGE_CODE 'en' %}"
-    lang="{% firstof LANGUAGE_CODE 'en' %}">
-  <head>
-    <title>{% block title %}{% endblock %} - Eugene Yeo</title>
-
+<!DOCTYPE html>
+{% load media %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <title>{% block title %}{% endblock %} - Young Generation</title>
     {% block css %}
+    	{% include_media 'main.css' %}
     {% endblock %}
 
     {% block preload_js %}
     {% endblock %}
 
     {% block extra-head %}{% endblock %}
-  </head>
-
-  <body>
-    <div id="header">
-      <a id="logo" href="/">Yeo's Blog</a>
-    </div>
-
-    <div class="columns">
-      <div id="content" class="column">
-        {% block content-header %}
-          {% if error %}<div class="error">{{ error }}</div>{% endif %}
-          {% if info %}<div class="info">{{ info }}</div>{% endif %}
-          {% if messages %}
-            {% for message in messages %}
-              <div class="info">{{ message }}</div>
-            {% endfor %}
-          {% endif %}
-        {% endblock %}
-
-        {% block content %}{% endblock %}
-      </div>
-
-      <div id="sidebar" class="column">
-        {% block sidebar %}
-        {% endblock %}
-      </div>
-    </div>
-
-    <div id="footer">
-      <p>Powered by <a href="http://www.allbuttonspressed.com/projects/django-nonrel">Django-nonrel</a>
-      and <a href="http://appengine.google.com">GoogleAppEngine</a></p>
-    </div>
-
-    {% block js %}
-    {% endblock %}
-  </body>
+</head>
+<body>
+<div id="wrapper">
+	<div id="wrapper-bgbtm">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="/">Young Generation</a></h1>
+				<p>save young generation</a></p>
+			</div>
+		</div>
+		<!-- end #header -->
+		<div id="menu">
+			<ul>
+				<li><a href="/">Homepage</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/admin">Admin</a></li>
+			</ul>
+		</div>
+		<!-- end #menu -->
+		<div id="page">
+			<div id="page-bgtop">
+				<div id="page-bgbtm">
+					<div id="content">
+						{% block content-header %}
+				          {% if error %}<div class="error">{{ error }}</div>{% endif %}
+				          {% if info %}<div class="info">{{ info }}</div>{% endif %}
+				          {% if messages %}
+				            {% for message in messages %}
+				              <div class="info">{{ message }}</div>
+				            {% endfor %}
+				          {% endif %}
+				        {% endblock %}
+						{% block content %}{% endblock %}
+					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<div id="search">
+							<h2>Search</h2>
+							<form method="get" action="">
+								<fieldset>
+									<input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+									<input type="submit" id="search-submit" value="GO" />
+								</fieldset>
+							</form>
+						</div>
+						<ul>
+							<li>
+								<h2>About Me</h2>
+								<p>I am Young programmer. Passion in programming. Has believe that Web will be the era between 1990 - 2100
+								Dream to be a Scientist. Using technology to solve Mystery in Science
+								I don't really enjoy doing business or marketing, I hate promoting stuff, or selling stuff.
+								I hate doing market research, I hate to cheat people. I do enjoy helping others, but if I have the chance or capability.</p>
+								<p>I love Judo</p>
+							</li>
+						{% block sidebar %}
+        				{% endblock %}
+        				</ul>
+					</div>
+					<!-- end #sidebar -->
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<!-- end #page -->
+		<div id="footer">
+			<p>Copyright (c) 2011 young-gene.appspot.com. All rights reserved.</p>
+		</div>
+		<!-- end #footer -->
+		{% block js %}
+    	{% endblock %}
+	</div>
+</div>
+</body>
 </html>

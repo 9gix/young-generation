@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^blog/',include('blog.urls')),
     ('^$', 'django.views.generic.simple.direct_to_template',
-     {'template': 'home.html'}),
+     {'template': 'index.html'}),
 )

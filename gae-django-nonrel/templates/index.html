@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load media %}
+{% block content %}
+<div class="post">
+	<h2 class="title"><a href="#">Welcome to the Young Generation Site </a></h2>
+	<p class="meta">&nbsp;&bull;&nbsp;by Eugene on August 22, 2011</p>
+	<div class="entry">
+		<p><img src="{% media_url 'images/img02.jpg' %}" width="143" height="143" alt="" class="alignleft border" /></p>
+		<p>This sites welcome all young generation to share their opinion about the web.</p>
+		<p>Seniors and elderly are about to views how the internet has change the worlds.</p>
+	</div>
+</div>
+{% endblock %}
+{% block sidebar %}
+						
+							
+							<li>
+								<h2>Categories</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+{% endblock %}
