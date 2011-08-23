@@ -24,6 +24,10 @@ handlers:
 - url: /media
   static_dir: _generated_media/
   expiration: '365d'
+
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
   
 - url: /.*
   script: djangoappengine/main/main.py
