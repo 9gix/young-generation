@@ -25,3 +25,10 @@ indexes:
   properties:
   - name: __key__
     direction: desc
+
+- kind: blog_post
+  properties:
+  - name: blog_id
+  - name: published
+  - name: published_on
+    direction: desc

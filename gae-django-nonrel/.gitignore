@@ -37,3 +37,5 @@ local_settings.py
 
 # Google AppEngine
 /.gaedata
+/_generated_media
+/_generated_media_names.py

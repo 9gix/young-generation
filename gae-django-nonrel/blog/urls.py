@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import *
-from blog.views import *
 
-urlpatterns = patterns('',
-    (r'^$',blog),
+urlpatterns = patterns('blog.views',
+    (r'^review/(?P<review_key>.*)$', 'review'),
 )
