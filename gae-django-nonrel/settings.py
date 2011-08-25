@@ -13,14 +13,14 @@ DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
 AUTOLOAD_SITECONF = 'dbindexes'
 
 SITE_NAME = 'Young Generation'
-SITE_DESCRIPTION = ''
+SITE_DESCRIPTION = 'Young Generation'
 SITE_COPYRIGHT = 'young-gene.appspot.com'
-DISQUS_SHORTNAME = ''
-GOOGLE_ANALYTICS_ID = ''
+DISQUS_SHORTNAME = 'young-gene'
+GOOGLE_ANALYTICS_ID = 'UA-25348821-1'
 # Get the ID from the CSE "Basics" control panel ("Search engine unique ID")
-GOOGLE_CUSTOM_SEARCH_ID = ''
+GOOGLE_CUSTOM_SEARCH_ID = '005997832323097011877:jokucbrqnt0'
 # Set RT username for retweet buttons
-TWITTER_USERNAME = ''
+TWITTER_USERNAME = 'ye0eugene0ey'
 # In order to always have uniform URLs in retweets and FeedBurner we redirect
 # any access to URLs that are not in ALLOWED_DOMAINS to the first allowed
 # domain. You can have additional domains for testing.
